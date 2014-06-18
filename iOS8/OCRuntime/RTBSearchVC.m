@@ -79,6 +79,11 @@
     return cell;
 }
 
+// FIXME: Explicit height workaround for bug in iOS 8 beta 2
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
 #pragma mark UISearchBarDelegate protocol
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {

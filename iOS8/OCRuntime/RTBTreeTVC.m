@@ -103,6 +103,11 @@
 	[self.navigationController pushViewController:tvc animated:YES];
 }
 
+// FIXME: Explicit height workaround for bug in iOS 8 beta 2
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
 #pragma mark - Navigation
 
 //// In a story board-based application, you will often want to do a little preparation before navigation

@@ -436,6 +436,11 @@
 	[self.navigationController pushViewController:ovc animated:YES];
 }
 
+// FIXME: Explicit height workaround for bug in iOS 8 beta 2
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
 - (void)performFunction:(NSString *)method withObjects:(NSMutableArray *)parameters removing:(NSMutableArray *)removing {
     NSRange range = [method rangeOfString:@")"]; // return type
 	

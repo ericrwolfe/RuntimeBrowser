@@ -100,6 +100,11 @@ static const NSUInteger kPrivateFrameworks = 1;
 	[self.navigationController pushViewController:listTVC animated:YES];
 }
 
+// FIXME: Explicit height workaround for bug in iOS 8 beta 2
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
 - (IBAction)loadAllFrameworks:(id)sender {
 	_alertView = [[UIAlertView alloc] init];
 	_alertView.title = @"Loading All Frameworks";
