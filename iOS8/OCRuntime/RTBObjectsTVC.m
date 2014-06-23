@@ -409,7 +409,7 @@
 			o = [NSString stringWithFormat:@"%d", (int)o];
 		} else if([t isEqualToString:@"double"] || [t isEqualToString:@"float"]) {
 			o = [NSString stringWithFormat:@"%f", o];
-		} else if([t isEqualToString:@"BOOL"]) {
+		} else if([t isEqualToString:@"BOOL"]||[t isEqualToString:@"bool"]) {
 			o = ([o boolValue]) ? @"YES" : @"NO";
 		} else if ([t isEqualToString:@"void"]) {
             o = @"Completed";
